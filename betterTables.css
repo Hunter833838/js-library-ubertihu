@@ -1,0 +1,63 @@
+.BTButton{
+    border-radius: 5px;
+    background-color: #5CB3FF;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: white;
+    border-color: white;
+    font-size: 18px;
+    /*width: 100px;*/
+}
+
+.BTButton:active {
+  transform: translateY(4px);
+}
+
+.BetterTable{
+	border-collapse: collapse;
+    border-radius: 15px;
+    margin: 25px 0;
+    font-size: 14px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    background-color: white;
+}
+
+.BetterTable thead tr {
+    /*background-color: #5CB3FF;*/
+    /*color: white;*/
+    text-align: left;
+    border-radius: 25px;
+}
+
+.BetterTable thead {
+    border-radius: 25px;
+}
+
+.BetterTable th,
+.BetterTable td {
+    padding: 12px 15px;
+}
+
+.BetterTable th:first-child {
+    border-top-left-radius: 15px;
+}
+
+.BetterTable th {
+    background-color: #5CB3FF;
+    color: white;
+    text-align: left;
+    font-size: 17px;
+}
+
+.BetterTable th:hover {
+    cursor: pointer;
+}
+
+.BetterTable tr:hover{
+    background-color: #F0F8FF;
+}
+
+.BetterTable th:last-child {
+    border-top-right-radius: 15px;
+}
