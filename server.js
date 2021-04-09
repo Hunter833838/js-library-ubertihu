@@ -21,13 +21,47 @@ app.use(express.static(path.join(__dirname, '/pub')))
 // Let's make a route for an HTTP GET request to the 
 // 'root' of our app (i.e. top level domain '/')
 
-// app.get('/', (req, res) => {
-// 	// sending a string
-// 	//res.send('This should be the root route!')
+app.get('/', (req, res) => {
+	// sending a string
+	//res.send('This should be the root route!')
 
-// 	//sending some HTML
-// 	res.send('<h1>This should be the root route!</h1>')
-// })
+	//sending some HTML
+	res.sendFile(path.join(__dirname, '/pub/homepage.html'))
+})
+
+app.get('/examples', (req, res) => {
+	// sending a string
+	//res.send('This should be the root route!')
+
+	//sending some HTML
+	res.sendFile(path.join(__dirname, '/pub/examples.html'))
+})
+
+app.get('/documentation', (req, res) => {
+	// sending a string
+	//res.send('This should be the root route!')
+
+	//sending some HTML
+	res.sendFile(path.join(__dirname, '/pub/documentation.html'))
+})
+
+app.get('/getstarted', (req, res) => {
+	// sending a string
+	//res.send('This should be the root route!')
+
+	//sending some HTML
+	res.sendFile(path.join(__dirname, '/pub/getstarted.html'))
+})
+
+
+app.get('/download', (req, res) => {
+	// sending a string
+	//res.send('This should be the root route!')
+
+	//sending some HTML
+	res.redirect("https://github.com/csc309-winter-2021/js-library-ubertihu")
+})
+
 
 // Error codes
 app.get('/problem', (req, res) => {

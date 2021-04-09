@@ -1,3 +1,4 @@
+
 .BTButton{
     border-radius: 5px;
     background-color: #5CB3FF;
@@ -5,7 +6,14 @@
     color: white;
     border-color: white;
     font-size: 18px;
+    margin-right: 45%;
     /*width: 100px;*/
+}
+
+.BTSearch{
+    border-radius: 5px;
+    /*width: 50%;*/
+    /*margin-left: 20%;*/
 }
 
 .BTButton:active {
@@ -13,7 +21,7 @@
 }
 
 .BetterTable{
-	border-collapse: collapse;
+    border-collapse: collapse;
     border-radius: 15px;
     margin: 25px 0;
     font-size: 14px;
@@ -24,8 +32,6 @@
 }
 
 .BetterTable thead tr {
-    /*background-color: #5CB3FF;*/
-    /*color: white;*/
     text-align: left;
     border-radius: 25px;
 }
@@ -60,4 +66,24 @@
 
 .BetterTable th:last-child {
     border-top-right-radius: 15px;
+}
+
+.BetterTable tr.averageRow:hover{
+
+}
+
+.BetterTable tr.averageRow td{
+    background-color: grey
+}
+
+.BetterTable tr.averageRow td:hover{
+    background-color: white
+}
+
+.BetterTable th.hoveringOver{
+    background-color: #66ffcc
+}
+
+.BetterTable th.beingDragged{
+    opacity: 0.4
 }
