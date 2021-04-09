@@ -1,0 +1,60 @@
+.header {
+    /*display: flex;*/
+    /*flex-direction: column*/
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+h1 {
+    font-size: 60px;
+}
+
+h1:hover{
+    cursor: pointer;
+    background-color: #F0F8FF;
+}
+h2 {
+    font-size: 35px;
+    font-family: Helvetica, sans-serif;
+}
+
+
+body {
+    background-color: #F5F5F5;
+    font-family: Helvetica, sans-serif;
+}
+
+#navbar {
+  background-color: #F5F5F5;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+#navbar  a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar #right a{
+    float: right;
+}
+
+/* Change the color of links on hover */
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}

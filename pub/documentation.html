@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Documentation | BetterTables.js</title>
+    <link rel="stylesheet" href="css/documentation.css">
+     <link rel="stylesheet" href="css/navbar.css">
+    <script type="text/javascript" src='js/BetterTables.js'></script>
+    <script defer type="text/javascript" src='js/documentation.js'></script>
+	</head>
+  <body>
+        <div id="navbar">
+        <a href="/">Home</a>
+        <a href="/getstarted">Get Started</a>
+        <a href="/documentation">Documentation</a>
+        <a href="/examples">Examples</a>   
+      <div id="right">
+        <a href="/download">Download</a>
+      </div>
+    </div>
+    <div class="content">
+      <div class='center'>
+        <h1>Documentation</h1>
+      </div>
+    <div id="description">
+      <h2>Note</h2>
+      <p>All of the documentation tables below are BetterTables, hope this helps absorb the information better!</p>
+      <h2>Args Input Parameter</h2>
+      <p>All of the fields specified in args are optional, as well as the args parameter itself</p>
+      <table id="args">
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Type</th>
+        <th>Default Value</th>
+        <th>Description</th>
+      </tr>
+   </thead>
+   <tbody>
+     <tr>
+        <td>sortable</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>Enable sorting table by a specific column by clicking on it's header</td>
+      </tr>
+      <tr>
+        <td>exportToCSV</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>Show button that allows user to download table contents as a CSV file</td>
+      </tr>
+      <tr>
+        <td>reorderColumns</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>Enable reordering table columns by dragging it's header</td>
+      </tr>
+      <tr>
+        <td>search</td>
+        <td>JSON</td>
+        <td>None</td>
+        <td>Show search bar that allows users to search the contents of search.header</td>
+      </tr>
+      <tr>
+        <td>search.header</td>
+        <td>String</td>
+        <td>Required if search</td>
+        <td>Name of the column that the search bar will use to search through</td>
+      </tr>
+      <tr>
+        <td>tableData</td>
+        <td>JSON</td>
+        <td>None</td>
+        <td>Will create new table (instead of parsing data from existing table) from TableData</td>
+      </tr>
+      <tr>
+        <td>tableData.headers</td>
+        <td>array of strings</td>
+        <td>Required if search</td>
+        <td>List of headers to generate new table with</td>
+      </tr>
+      <tr>
+        <td>tableData.rows</td>
+        <td>array of arrays of strings</td>
+        <td>Required if search</td>
+        <td>List of rows to generate new table with, rows[n].length must equal tableData.headers.length</td>
+      </tr>
+   </tbody>
+ </table>
+   <h2>BetterTable Functions</h2>
+   <p>To see these functions in action, refer to the <a href="/examples">examples</a> page!
+    <table id="functions">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Return</th>
+        <th>Description</th>
+      </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>BetterTable(table, args)</td>
+       <td>BetterTable Object</td>
+       <td>Renders a BetterTable from table, and uses arguments in args</td>
+     </tr>
+     <tr>
+        <td>BetterTable.tableOrID(table)</td>
+        <td>None</td>
+        <td>Checks if table is a node representing a table, or a string representing element ID. If type is string, set internal elementID value. If table doesn't have an elementID, randomly generate one starting with "BT", then set internal elementID value</td>
+      </tr>
+      <tr>
+        <td>BetterTable.parseTableContents(String elementID)</td>
+        <td>{data:{headers, rows}}</td>
+        <td>Parses the content of table at element ID, returns content in json where headers = [header1, header2...] and rows = [[cell00,cell01...], [cell11, cell12]], also sets internal variables, headers and rows</td>
+      </tr>
+      <tr>
+        <td>BetterTable.renderTable()</td>
+        <td>None</td>
+        <td>Renders a BetterTable from id elementID, headers and rows (internal vars)</td>
+      </tr>
+      <tr>
+        <td>BetterTable.addSearchBar(String columnHeader)</td>
+        <td>None</td>
+        <td>Adds a search bar to the BetterTable, with id="searchBar"+elementID which searches through column columnHeader</td>
+      </tr>
+      <tr>
+        <td>BetterTable.addExportCSVButton()</td>
+        <td>None</td>
+        <td>Adds a button with id="exportButton"+elementID to export the contents of a table to CSV</td>
+      </tr>
+      <tr>
+        <td>BetterTable.addReorderableColumns()</td>
+        <td>None</td>
+        <td>Enables dragging of column headers to reorder them</td>
+      </tr>
+   </tbody>
+ </table>
+ <h2>BetterTable Properties</h2>
+ <p> Default values are assuming we don't use the args input parameter, which sets these values</p>
+ <table id="variables">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+   </thead>
+   <tbody>
+     <tr>
+        <td>headers</td>
+        <td>array</td>
+        <td>[]</td>
+        <td>Stores the headers of the Table.</td>
+      </tr>
+      <tr>
+        <td>rows</td>
+        <td>array of arrays</td>
+        <td>[[]]</td>
+        <td>Stores each row of the table in a seperate array. Length of each array must be equal to length of headers</td>
+      </tr>
+      <tr>
+        <td>elementID</td>
+        <td>string</td>
+        <td>""</td>
+        <td>The element of the table</td>
+      </tr>
+      <tr>
+        <td>sortable</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>Allow sorting rows by clicking on a column header</td>
+      </tr>
+      <tr>
+        <td>exportToCSV</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>Show a button to export the contents of a table to CSV</td>
+      </tr>
+      <tr>
+        <td>reorderColumns</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>Allow dragging of column headers to reorder them</td>
+      </tr>
+   </tbody>
+ </table>
+ <h2>CSS Styling Override</h2>
+ <p> To override the default CSS for a BetterTable, style the following properties</p>
+ <p> Fun fact: These documentation tables override the default styling!</p>
+ <table id="styling">
+    <thead>
+      <tr>
+        <th>CSS Element</th>
+        <th>Description</th>
+      </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>.BTButton</td>
+       <td>Export To CSV Button</td>
+     </tr>
+     <tr>
+        <td>.BTSearch</td>
+        <td>BetterTable Search Bar</td>
+      </tr>
+      <tr>
+        <td>.BetterTable</td>
+        <td>The Table itself</td>
+      </tr>
+      <tr>
+        <td>.BetterTable thead</td>
+        <td>The head of the BetterTable</td>
+      </tr>
+      <tr>
+        <td>.BetterTable thead tr </td>
+        <td>The header row of the BetterTable</td>
+      </tr>
+       <tr>
+        <td>.BetterTable th </td>
+        <td>The header cells of the BetterTable</td>
+      </tr>
+      <tr>
+        <td>.BetterTable th.hoveringOver </td>
+        <td>Appearance when a table header is being dragged over another table header</td>
+      </tr>
+      <tr>
+        <td>.BetterTable th.beingDragged </td>
+        <td>Appearance when a table header is being dragged</td>
+      </tr>
+       <tr>
+        <td>.BetterTable tbody </td>
+        <td>The body of the BetterTable</td>
+      </tr>
+      <tr>
+        <td>.BetterTable td </td>
+        <td>The row cells of the BetterTable</td>
+      </tr>
+   </tbody>
+ </table>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+body {
+    background-color: #F5F5F5;
+    font-family: Helvetica, sans-serif;
+}
+
+.content {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.BTButton{
+    border-radius: 5px;
+    background-color: #303030;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: white;
+    /*border-color: white;*/
+    font-size: 18px;
+    margin-right: 45%;
+    /*width: 100px;*/
+}
+
+.BTSearch{
+    border-radius: 5px;
+    /*width: 50%;*/
+    /*margin-left: 20%;*/
+}
+
+.BTButton:active {
+  transform: translateY(4px);
+}
+
+.BetterTable{
+    border-collapse: collapse;
+    /*border-radius: 15px;*/
+    margin: 25px 0;
+    font-size: 14px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    min-width: 400px;
+    /*box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);*/
+    /*background-color: white;*/
+}
+
+.BetterTable thead tr {
+    text-align: left;
+    border-radius: 25px;
+}
+
+.BetterTable thead {
+    /*border-radius: 25px;*/
+}
+
+.BetterTable th,
+.BetterTable td {
+    padding: 12px 15px;
+    border: 1px solid black;
+}
+
+.BetterTable th:first-child {
+    /*border-top-left-radius: 15px;*/
+}
+
+.BetterTable th {
+    background-color:   #303030;
+    color: white;
+    text-align: left;
+    font-size: 17px;
+}
+
+.BetterTable th:hover {
+    cursor: pointer;
+}
+
+.BetterTable tr:hover{
+    background-color: #FFFFFF;
+}
+
+.BetterTable th:last-child {
+    /*border-top-right-radius: 15px;*/
+}
+
+
+.BetterTable th.hoveringOver{
+    background-color: #66ffcc
+}
+
+.BetterTable th.beingDragged{
+    opacity: 0.4
+}
+
+#styling{
+  margin-left:0;
+}
+
+#args{
+  margin-left:0;
+}
+
+#functions{
+  margin-left:0;
+}
+
+#variables{
+  margin-left:0;
+}
