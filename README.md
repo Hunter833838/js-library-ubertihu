@@ -1,5 +1,6 @@
 # js-library-ubertihu
 
+## Getting Started Page ##
 ### Purpose ###
 The purpose of the BetterTable library is to give the user useful and intiutive ways to interact with data presented to them in a traditional HTML table
 
@@ -20,3 +21,11 @@ The library also gives developers many useful features including:
 
 ### Required Files ###
 To use the BetterTables library, include the BetterTables.js and BetterTables.css files in your web project. That's it!
+
+
+## Link To Landing Page ##
+https://bettertables.herokuapp.com/
+
+## Documentation Link ##
+https://bettertables.herokuapp.com/documentation
+
