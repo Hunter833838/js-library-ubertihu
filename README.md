@@ -1,6 +1,6 @@
 # js-library-ubertihu
 
-Purpose
+### Purpose ###
 The purpose of the BetterTable library is to give the user useful and intiutive ways to interact with data presented to them in a traditional HTML table
 
 A BetterTable is essentially a wrapper for an classic HTML table, giving it additional functionality, including (but not limited to):
@@ -18,5 +18,5 @@ The library also gives developers many useful features including:
 -Parse the contents of any table and store in a friendly format
 -Create a BetterTable from raw data
 
-Required Files
+### Required Files ###
 To use the BetterTables library, include the BetterTables.js and BetterTables.css files in your web project. That's it!
