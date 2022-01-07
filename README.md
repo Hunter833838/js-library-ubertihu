@@ -29,3 +29,5 @@ https://bettertables.herokuapp.com/
 ## Documentation Link ##
 https://bettertables.herokuapp.com/documentation
 
+## Disclaimer ##
+Currently the BetterTables Library only offers support for Chromium based browsers (Chrome, Edge...) . Functionality on other browsers may be limited.
